@@ -1,0 +1,44 @@
+.grilla {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: "cabeza    cabeza    cabeza"
+                             "contenido aside aside"
+                             "contenido aside aside"
+                             "wiject1 wiject2 wiject2"
+                             "pie    pie   pie"
+        ;
+}
+
+.grilla .header {
+    background-color: rgb(63, 201, 201);
+    /* grid-column: span 3; */
+    grid-area: cabeza;
+}
+.grilla .aside {
+    background-color: rgb(218, 202, 108);
+    /* grid-column: 3/4;
+    grid-row: 2/5; */
+    grid-area: aside;
+}
+.grilla .content {
+    background-color: rgb(142, 205, 83);
+    color: #000;
+    border: none;
+    /* grid-column: span 2;
+    grid-row: span 3; */
+    grid-area: contenido;
+}
+.grilla .widget1 {
+    background-color: rgb(206, 147, 192);
+    grid-area: wiject1;
+}
+.grilla .widget2 {
+    background-color: rgb(152, 155, 132);
+    grid-area: wiject2;
+}
+.grilla .footer {
+    background-color: rgb(47, 42, 129);
+    grid-area: pie;
+}
